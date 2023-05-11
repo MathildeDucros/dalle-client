@@ -26,14 +26,16 @@ const CreatePost = () => {
     setForm({ ...form, prompt: randomPrompt });
   };
 
+  // const BACKEND_URL = "https://dalle-back.vercel.app/";
+
   //lien avec le backend AI
   const generateImage = async () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
         const response = await fetch(
-          "https://dalle-back.vercel.app/api/v1/dalle",
-          // " http://localhost:8080/api/v1/dalle",
+          // `${BACKEND_URL}/api/v1/dalle`,
+          " http://localhost:8080/api/v1/dalle",
           {
             method: "POST",
             headers: {
@@ -65,8 +67,8 @@ const CreatePost = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          "https://dalle-back.vercel.app/api/v1/post",
-          // "http://localhost:8080/api/v1/post",
+          // `${BACKEND_URL}/api/v1/post`,
+          "http://localhost:8080/api/v1/post",
           {
             method: "POST",
             headers: {

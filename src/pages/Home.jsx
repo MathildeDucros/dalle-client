@@ -11,6 +11,7 @@ const RenderCards = ({ data, title }) => {
     <h2 className="mt-5 font-bold text-[#6469ff] text-xl uppercase">{title}</h2>
   );
 };
+// const BACKEND_URL = "https://dalle-back.vercel.app/";
 
 const Home = () => {
   const [loading, setLoading] = useState(false);
@@ -25,8 +26,8 @@ const Home = () => {
 
     try {
       const response = await fetch(
-        "https://dalle-back.vercel.app/api/v1/post",
-        // "http://localhost:8080/api/v1/post",
+        // `${BACKEND_URL}/api/v1/post`,
+        "http://localhost:8080/api/v1/post",
         {
           method: "GET",
           headers: {
