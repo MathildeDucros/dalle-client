@@ -25,8 +25,8 @@ const Home = () => {
 
     try {
       const response = await fetch(
-        // "https://dalle-back.vercel.app/api/v1/post"
-        "http://localhost:8080/api/v1/post",
+        "https://dalle-back.vercel.app/api/v1/post"
+        // "http://localhost:8080/api/v1/post",
         {
           method: "GET",
           headers: {
