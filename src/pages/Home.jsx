@@ -27,7 +27,7 @@ const Home = () => {
     try {
       const response = await fetch(
         // `${BACKEND_URL}/api/v1/post`,
-        "http://localhost:8080/api/v1/post",
+        "https://dall-e-mi7g.onrender.com/api/v1/post",
         {
           method: "GET",
           headers: {

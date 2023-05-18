@@ -34,8 +34,8 @@ const CreatePost = () => {
       try {
         setGeneratingImg(true);
         const response = await fetch(
-          `${BACKEND_URL}/api/v1/dalle`,
-          // " http://localhost:8080/api/v1/dalle",
+          // `${BACKEND_URL}/api/v1/dalle`,
+          "https://dall-e-mi7g.onrender.com/api/v1/dalle",
           {
             method: "POST",
             headers: {
@@ -68,7 +68,7 @@ const CreatePost = () => {
       try {
         const response = await fetch(
           // `${BACKEND_URL}/api/v1/post`,
-          "http://localhost:8080/api/v1/post",
+          "https://dall-e-mi7g.onrender.com/api/v1/post",
           {
             method: "POST",
             headers: {
